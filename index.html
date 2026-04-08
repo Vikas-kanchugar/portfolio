@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vikas kanchugar — Full Stack Developer & UI/UX Designer. Premium Developer Portfolio." />
+  <meta name="keywords" content="developer, portfolio, full stack, UI/UX, React, Node.js, web design" />
+  <meta name="author" content="Vikas kanchugar" />
+  <title>Vikas kanchugar— Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-box">
+      <div class="loader-logo">VK</div>
+      <div class="loader-track"><div class="loader-fill" id="loaderFill"></div></div>
+      <span class="loader-txt" id="loaderTxt">Initializing...</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">VK<span class="bdot"></span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about"          class="nav-link">About</a></li>
+        <li><a href="#skills"         class="nav-link">Skills</a></li>
+        <li><a href="#projects"       class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#education"      class="nav-link">Education</a></li>
+        <li><a href="#contact"        class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-ctrl">
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIco"></i>
+        </button>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <div class="grid-mesh"></div>
+    </div>
+    <div class="hero-wrap container">
+      <div class="hero-left">
+        <div class="hero-pill ru" style="--d:.1s">
+          <span class="pulse-dot"></span> Open to new opportunities
+        </div>
+        <h1 class="hero-heading ru" style="--d:.2s">
+          Hi, I'm<br/><span class="grad-txt">Vikas Kanchugar</span>
+        </h1>
+        <div class="hero-role ru" style="--d:.32s">
+          <span class="role-static">I build </span>
+          <span class="typed-wrap"><span id="typedTxt"></span><span class="caret">|</span></span>
+        </div>
+        <p class="hero-sub ru" style="--d:.44s">
+          Full Stack Developer &amp; UI/UX Designer crafting experiences
+          at the intersection of clean code and bold design.
+        </p>
+        <div class="hero-btns ru" style="--d:.56s">
+          <a href="#contact" class="btn btn-primary ripple">
+            <i class="fas fa-paper-plane"></i> Hire Me
+          </a>
+          <a href="#" class="btn btn-outline ripple" id="resumeDl" download>
+            <i class="fas fa-download"></i> Resume
+          </a>
+        </div>
+        <div class="hero-stats ru" style="--d:.68s">
+          <div class="hstat">
+            <span class="hnum" data-target="5">0</span><sup>+</sup>
+            <span class="hlbl">Years Exp</span>
+          </div>
+          <div class="hsep"></div>
+          <div class="hstat">
+            <span class="hnum" data-target="80">0</span><sup>+</sup>
+            <span class="hlbl">Projects</span>
+          </div>
+          <div class="hsep"></div>
+          <div class="hstat">
+            <span class="hnum" data-target="40">0</span><sup>+</sup>
+            <span class="hlbl">Clients</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right ru" style="--d:.28s">
+        <div class="profile-orbit">
+          <div class="p-glow"></div>
+          <div class="p-blob">
+            <div class="p-avatar"><i class="fas fa-user-tie"></i></div>
+          </div>
+          <div class="fbadge fb1"><i class="fab fa-react"></i><span>React</span></div>
+          <div class="fbadge fb2"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+          <div class="fbadge fb3"><i class="fas fa-magic"></i><span>UI/UX</span></div>
+          <div class="fbadge fb4"><i class="fas fa-cloud"></i><span>Cloud</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sec-head ru">
+        <span class="sec-tag">Who I Am</span>
+        <h2 class="sec-title">About <span class="grad-txt">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-col ru" style="--d:.1s">
+          <div class="about-img-wrap">
+            <div class="about-img-inner"><i class="fas fa-user"></i></div>
+            <div class="about-avail"><i class="fas fa-check-circle"></i> Available for hire</div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <p class="about-lead ru" style="--d:.2s">
+            I'm a passionate Full Stack Developer with <strong>5+ years</strong> of experience
+            building scalable web applications and pixel-perfect interfaces that users love.
+          </p>
+          <p class="about-body ru" style="--d:.28s">
+            Specializing in React, Node.js, and cloud-native architectures, I bridge the gap
+            between elegant design and solid engineering — shipping products for startups
+            and Fortune 500s with equal focus on performance and user experience.
+          </p>
+          <div class="about-info ru" style="--d:.36s">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>San Francisco, CA</span></div>
+            <div class="info-item"><i class="fas fa-envelope"></i><span>alex@portfolio.dev</span></div>
+            <div class="info-item"><i class="fas fa-graduation-cap"></i><span>M.Sc. CS — UC Berkeley</span></div>
+            <div class="info-item"><i class="fas fa-briefcase"></i><span>Senior Engineer @ TechVault Inc.</span></div>
+          </div>
+          <div class="mini-cards ru" style="--d:.44s">
+            <div class="mini-card glass-card">
+              <div class="mc-ico"><i class="fas fa-laptop-code"></i></div>
+              <div><h5>Frontend</h5><p>React · Vue · Next.js</p></div>
+            </div>
+            <div class="mini-card glass-card">
+              <div class="mc-ico"><i class="fas fa-server"></i></div>
+              <div><h5>Backend</h5><p>Node · Python · Go</p></div>
+            </div>
+            <div class="mini-card glass-card">
+              <div class="mc-ico"><i class="fas fa-cloud"></i></div>
+              <div><h5>DevOps</h5><p>AWS · Docker · CI/CD</p></div>
+            </div>
+            <div class="mini-card glass-card">
+              <div class="mc-ico"><i class="fas fa-palette"></i></div>
+              <div><h5>Design</h5><p>Figma · Motion · DS</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section id="skills" class="section alt-bg">
+    <div class="container">
+      <div class="sec-head ru">
+        <span class="sec-tag">Expertise</span>
+        <h2 class="sec-title">Skills &amp; <span class="grad-txt">Technologies</span></h2>
+      </div>
+      <div class="skill-tabs ru" style="--d:.1s">
+        <button class="stab active" data-tab="frontend"><i class="fas fa-desktop"></i> Frontend</button>
+        <button class="stab" data-tab="backend"><i class="fas fa-server"></i> Backend</button>
+        <button class="stab" data-tab="tools"><i class="fas fa-tools"></i> Tools</button>
+      </div>
+
+      <div class="skill-panel active" id="panel-frontend">
+        <div class="skills-grid">
+          <div class="sk ru" style="--d:.05s"><div class="sk-head"><span class="sk-ico"><i class="fab fa-react"></i></span><span class="sk-nm">React / Next.js</span><span class="sk-pct">95%</span></div><div class="sk-bar"><div class="sk-fill" data-w="95"></div></div></div>
+          <div class="sk ru" style="--d:.10s"><div class="sk-head"><span class="sk-ico"><i class="fab fa-vuejs"></i></span><span class="sk-nm">Vue / Nuxt</span><span class="sk-pct">85%</span></div><div class="sk-bar"><div class="sk-fill" data-w="85"></div></div></div>
+          <div class="sk ru" style="--d:.15s"><div class="sk-head"><span class="sk-ico"><i class="fab fa-js-square"></i></span><span class="sk-nm">TypeScript</span><span class="sk-pct">92%</span></div><div class="sk-bar"><div class="sk-fill" data-w="92"></div></div></div>
+          <div class="sk ru" style="--d:.20s"><div class="sk-head"><span class="sk-ico"><i class="fab fa-css3-alt"></i></span><span class="sk-nm">CSS / Tailwind</span><span class="sk-pct">96%</span></div><div class="sk-bar"><div class="sk-fill" data-w="96"></div></div></div>
+          <div class="sk ru" style="--d:.25s"><div class="sk-head"><span class="sk-ico"><i class="fas fa-paint-brush"></i></span><span class="sk-nm">Figma / UI Design</span><span class="sk-pct">88%</span></div><div class="sk-bar"><div class="sk-fill" data-w="88"></div></div></div>
+          <div class="sk ru" style="--d:.30s"><div class="sk-head"><span class="sk-ico"><i class="fas fa-mobile-alt"></i></span><span class="sk-nm">Responsive Design</span><span class="sk-pct">98%</span></div><div class="sk-bar"><div class="sk-fill" data-w="98"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-panel" id="panel-backend">
+        <div class="skills-grid">
+          <div class="sk ru" style="--d:.05s"><div class="sk-head"><span class="sk-ico"><i class="fab fa-node-js"></i></span><span class="sk-nm">Node.js / Express</span><span class="sk-pct">93%</span></div><div class="sk-bar"><div class="sk-fill" data-w="93"></div></div></div>
+          <div class="sk ru" style="--d:.10s"><div class="sk-head"><span class="sk-ico"><i class="fab fa-python"></i></span><span class="sk-nm">Python / FastAPI</span><span class="sk-pct">87%</span></div><div class="sk-bar"><div class="sk-fill" data-w="87"></div></div></div>
+          <div class="sk ru" style="--d:.15s"><div class="sk-head"><span class="sk-ico"><i class="fas fa-database"></i></span><span class="sk-nm">PostgreSQL / MongoDB</span><span class="sk-pct">85%</span></div><div class="sk-bar"><div class="sk-fill" data-w="85"></div></div></div>
+          <div class="sk ru" style="--d:.20s"><div class="sk-head"><span class="sk-ico"><i class="fas fa-bolt"></i></span><span class="sk-nm">GraphQL / REST</span><span class="sk-pct">90%</span></div><div class="sk-bar"><div class="sk-fill" data-w="90"></div></div></div>
+          <div class="sk ru" style="--d:.25s"><div class="sk-head"><span class="sk-ico"><i class="fas fa-lock"></i></span><span class="sk-nm">Auth &amp; Security</span><span class="sk-pct">83%</span></div><div class="sk-bar"><div class="sk-fill" data-w="83"></div></div></div>
+          <div class="sk ru" style="--d:.30s"><div class="sk-head"><span class="sk-ico"><i class="fas fa-microchip"></i></span><span class="sk-nm">Microservices</span><span class="sk-pct">80%</span></div><div class="sk-bar"><div class="sk-fill" data-w="80"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-panel" id="panel-tools">
+        <div class="skills-grid">
+          <div class="sk ru" style="--d:.05s"><div class="sk-head"><span class="sk-ico"><i class="fab fa-docker"></i></span><span class="sk-nm">Docker / Kubernetes</span><span class="sk-pct">84%</span></div><div class="sk-bar"><div class="sk-fill" data-w="84"></div></div></div>
+          <div class="sk ru" style="--d:.10s"><div class="sk-head"><span class="sk-ico"><i class="fab fa-aws"></i></span><span class="sk-nm">AWS / GCP</span><span class="sk-pct">81%</span></div><div class="sk-bar"><div class="sk-fill" data-w="81"></div></div></div>
+          <div class="sk ru" style="--d:.15s"><div class="sk-head"><span class="sk-ico"><i class="fab fa-git-alt"></i></span><span class="sk-nm">Git / GitHub</span><span class="sk-pct">97%</span></div><div class="sk-bar"><div class="sk-fill" data-w="97"></div></div></div>
+          <div class="sk ru" style="--d:.20s"><div class="sk-head"><span class="sk-ico"><i class="fas fa-infinity"></i></span><span class="sk-nm">CI/CD Pipelines</span><span class="sk-pct">86%</span></div><div class="sk-bar"><div class="sk-fill" data-w="86"></div></div></div>
+          <div class="sk ru" style="--d:.25s"><div class="sk-head"><span class="sk-ico"><i class="fas fa-terminal"></i></span><span class="sk-nm">Linux / CLI</span><span class="sk-pct">89%</span></div><div class="sk-bar"><div class="sk-fill" data-w="89"></div></div></div>
+          <div class="sk ru" style="--d:.30s"><div class="sk-head"><span class="sk-ico"><i class="fas fa-vial"></i></span><span class="sk-nm">Jest / Cypress</span><span class="sk-pct">82%</span></div><div class="sk-bar"><div class="sk-fill" data-w="82"></div></div></div>
+        </div>
+      </div>
+
+      <div class="tech-strip ru" style="--d:.5s">
+        <div class="tchip" title="React"><i class="fab fa-react"></i></div>
+        <div class="tchip" title="Node.js"><i class="fab fa-node-js"></i></div>
+        <div class="tchip" title="Python"><i class="fab fa-python"></i></div>
+        <div class="tchip" title="JavaScript"><i class="fab fa-js-square"></i></div>
+        <div class="tchip" title="Docker"><i class="fab fa-docker"></i></div>
+        <div class="tchip" title="AWS"><i class="fab fa-aws"></i></div>
+        <div class="tchip" title="Git"><i class="fab fa-git-alt"></i></div>
+        <div class="tchip" title="Linux"><i class="fab fa-linux"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="sec-head ru">
+        <span class="sec-tag">Portfolio</span>
+        <h2 class="sec-title">Featured <span class="grad-txt">Projects</span></h2>
+      </div>
+      <div class="proj-grid">
+
+        <div class="proj-card glass-card ru" style="--d:.05s">
+          <div class="proj-img p-blue">
+            <i class="fas fa-chart-line pi"></i>
+            <div class="proj-ov">
+              <a href="#" class="pov-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="pov-btn" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="ptags"><span class="pt">React</span><span class="pt">Node.js</span><span class="pt">PostgreSQL</span></div>
+            <h3>FinDash — Analytics Platform</h3>
+            <p>Real-time financial analytics dashboard with interactive charts, AI-powered insights, and multi-currency support.</p>
+            <div class="plinks">
+              <a href="#" class="pl-btn"><i class="fas fa-globe"></i> Live Demo</a>
+              <a href="#" class="pl-btn ghost"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card ru" style="--d:.10s">
+          <div class="proj-img p-purple">
+            <i class="fas fa-shopping-cart pi"></i>
+            <div class="proj-ov">
+              <a href="#" class="pov-btn"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="pov-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="ptags"><span class="pt">Next.js</span><span class="pt">Stripe</span><span class="pt">MongoDB</span></div>
+            <h3>ShopFlow — E-Commerce Suite</h3>
+            <p>Full-featured e-commerce platform with real-time inventory, Stripe payments, and a powerful admin dashboard.</p>
+            <div class="plinks">
+              <a href="#" class="pl-btn"><i class="fas fa-globe"></i> Live Demo</a>
+              <a href="#" class="pl-btn ghost"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card ru" style="--d:.15s">
+          <div class="proj-img p-teal">
+            <i class="fas fa-comments pi"></i>
+            <div class="proj-ov">
+              <a href="#" class="pov-btn"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="pov-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="ptags"><span class="pt">Vue</span><span class="pt">Socket.io</span><span class="pt">Redis</span></div>
+            <h3>NexChat — Real-time Messenger</h3>
+            <p>End-to-end encrypted messaging with file sharing, video calls, group channels, and enterprise security.</p>
+            <div class="plinks">
+              <a href="#" class="pl-btn"><i class="fas fa-globe"></i> Live Demo</a>
+              <a href="#" class="pl-btn ghost"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card ru" style="--d:.20s">
+          <div class="proj-img p-rose">
+            <i class="fas fa-brain pi"></i>
+            <div class="proj-ov">
+              <a href="#" class="pov-btn"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="pov-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="ptags"><span class="pt">Python</span><span class="pt">FastAPI</span><span class="pt">OpenAI</span></div>
+            <h3>Intellect — AI Writing Assistant</h3>
+            <p>GPT-powered writing assistant with tone detection, plagiarism check, and multi-language support.</p>
+            <div class="plinks">
+              <a href="#" class="pl-btn"><i class="fas fa-globe"></i> Live Demo</a>
+              <a href="#" class="pl-btn ghost"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card ru" style="--d:.25s">
+          <div class="proj-img p-amber">
+            <i class="fas fa-tasks pi"></i>
+            <div class="proj-ov">
+              <a href="#" class="pov-btn"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="pov-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="ptags"><span class="pt">React</span><span class="pt">GraphQL</span><span class="pt">AWS</span></div>
+            <h3>TaskForge — Project Manager</h3>
+            <p>Kanban project management with time tracking, Gantt charts, team analytics, and Slack integrations.</p>
+            <div class="plinks">
+              <a href="#" class="pl-btn"><i class="fas fa-globe"></i> Live Demo</a>
+              <a href="#" class="pl-btn ghost"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card ru" style="--d:.30s">
+          <div class="proj-img p-green">
+            <i class="fas fa-map-marked-alt pi"></i>
+            <div class="proj-ov">
+              <a href="#" class="pov-btn"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="pov-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="ptags"><span class="pt">React Native</span><span class="pt">Maps API</span><span class="pt">Firebase</span></div>
+            <h3>WanderMap — Travel Companion</h3>
+            <p>Cross-platform travel app with offline maps, trip planning, community reviews, and budget tracking.</p>
+            <div class="plinks">
+              <a href="#" class="pl-btn"><i class="fas fa-globe"></i> Live Demo</a>
+              <a href="#" class="pl-btn ghost"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CERTIFICATIONS ─── -->
+  <section id="certifications" class="section alt-bg">
+    <div class="container">
+      <div class="sec-head ru">
+        <span class="sec-tag">Credentials</span>
+        <h2 class="sec-title">Certifications &amp; <span class="grad-txt">Licenses</span></h2>
+      </div>
+      <div class="certs-grid">
+
+        <div class="cert-card glass-card ru" style="--d:.05s">
+          <div class="cert-ico cico-aws"><i class="fab fa-aws"></i></div>
+          <div class="cert-info">
+            <h4>AWS Solutions Architect</h4>
+            <p class="cert-org">Amazon Web Services</p>
+            <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: January 2024</p>
+          </div>
+          <div class="cert-acts">
+            <a href="#" class="ca-btn ca-view"><i class="fas fa-eye"></i> View</a>
+            <a href="#" class="ca-btn ca-dl" download><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+
+        <div class="cert-card glass-card ru" style="--d:.10s">
+          <div class="cert-ico cico-g"><i class="fab fa-google"></i></div>
+          <div class="cert-info">
+            <h4>Google Cloud Professional</h4>
+            <p class="cert-org">Google Cloud Platform</p>
+            <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: March 2023</p>
+          </div>
+          <div class="cert-acts">
+            <a href="#" class="ca-btn ca-view"><i class="fas fa-eye"></i> View</a>
+            <a href="#" class="ca-btn ca-dl" download><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+
+        <div class="cert-card glass-card ru" style="--d:.15s">
+          <div class="cert-ico cico-meta"><i class="fab fa-meta"></i></div>
+          <div class="cert-info">
+            <h4>Meta Frontend Developer</h4>
+            <p class="cert-org">Meta (via Coursera)</p>
+            <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: June 2023</p>
+          </div>
+          <div class="cert-acts">
+            <a href="#" class="ca-btn ca-view"><i class="fas fa-eye"></i> View</a>
+            <a href="#" class="ca-btn ca-dl" download><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+
+        <div class="cert-card glass-card ru" style="--d:.20s">
+          <div class="cert-ico cico-mongo"><i class="fas fa-leaf"></i></div>
+          <div class="cert-info">
+            <h4>MongoDB Developer Associate</h4>
+            <p class="cert-org">MongoDB University</p>
+            <p class="cert-date"><i class="fas fa-calendar-alt"></i> Issued: September 2023</p>
+          </div>
+          <div class="cert-acts">
+            <a href="#" class="ca-btn ca-view"><i class="fas fa-eye"></i> View</a>
+            <a href="#" class="ca-btn ca-dl" download><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EDUCATION ─── -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="sec-head ru">
+        <span class="sec-tag">Learning</span>
+        <h2 class="sec-title">Academic <span class="grad-txt">Journey</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item ru" style="--d:.1s">
+          <div class="tl-marker"><div class="tl-dot"></div></div>
+          <div class="tl-card glass-card">
+            <span class="tl-yr">2020 – 2022</span>
+            <h4>M.Sc. Software Engineering</h4>
+            <p class="tl-inst"><i class="fas fa-university"></i> UC Berkeley</p>
+            <p class="tl-desc">Research on distributed systems and cloud-native architectures. Published two papers. GPA: 4.0/4.0.</p>
+            <div class="tl-tags"><span class="tt">Distributed Systems</span><span class="tt">Cloud</span><span class="tt">Research</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item ru" style="--d:.2s">
+          <div class="tl-marker"><div class="tl-dot"></div></div>
+          <div class="tl-card glass-card">
+            <span class="tl-yr">2016 – 2020</span>
+            <h4>B.Sc. Computer Science</h4>
+            <p class="tl-inst"><i class="fas fa-university"></i> Stanford University</p>
+            <p class="tl-desc">Specialized in Software Engineering and HCI. Dean's List all four years. GPA: 3.9/4.0.</p>
+            <div class="tl-tags"><span class="tt">Algorithms</span><span class="tt">HCI</span><span class="tt">AI/ML</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item ru" style="--d:.3s">
+          <div class="tl-marker"><div class="tl-dot"></div></div>
+          <div class="tl-card glass-card">
+            <span class="tl-yr">2014 – 2016</span>
+            <h4>Web Development Bootcamp</h4>
+            <p class="tl-inst"><i class="fas fa-laptop-code"></i> freeCodeCamp (Self-taught)</p>
+            <p class="tl-desc">Completed 1,200+ hours of full-stack curriculum. Built 30+ real-world projects across the full stack.</p>
+            <div class="tl-tags"><span class="tt">HTML/CSS</span><span class="tt">JavaScript</span><span class="tt">React</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section id="experience" class="section alt-bg">
+    <div class="container">
+      <div class="sec-head ru">
+        <span class="sec-tag">Career</span>
+        <h2 class="sec-title">Work <span class="grad-txt">Experience</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item ru" style="--d:.1s">
+          <div class="tl-marker"><div class="tl-dot tl-active"></div></div>
+          <div class="tl-card glass-card">
+            <span class="tl-yr curr-badge">2022 — Present</span>
+            <h4>Senior Full Stack Engineer</h4>
+            <p class="tl-inst"><i class="fas fa-building"></i> TechVault Inc. — San Francisco, CA</p>
+            <p class="tl-desc">Leading a team of 6 engineers building a SaaS platform serving 200k+ users. Improved performance by 60%.</p>
+            <ul class="exp-ul">
+              <li>Architected micro-frontend system cutting build time by 45%</li>
+              <li>Real-time features via WebSockets &amp; Redis Pub/Sub</li>
+              <li>Mentored 3 junior devs to mid-level promotions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item ru" style="--d:.2s">
+          <div class="tl-marker"><div class="tl-dot"></div></div>
+          <div class="tl-card glass-card">
+            <span class="tl-yr">2020 – 2022</span>
+            <h4>Frontend Engineer</h4>
+            <p class="tl-inst"><i class="fas fa-building"></i> Pixel Studio — Remote</p>
+            <p class="tl-desc">Built and maintained design systems used across 5 product lines. Championed accessibility and performance.</p>
+            <ul class="exp-ul">
+              <li>Reusable component library saving 30% dev time</li>
+              <li>Achieved 98 Lighthouse performance score</li>
+              <li>Storybook documentation and testing integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item ru" style="--d:.3s">
+          <div class="tl-marker"><div class="tl-dot"></div></div>
+          <div class="tl-card glass-card">
+            <span class="tl-yr">2019 – 2020</span>
+            <h4>Software Engineering Intern</h4>
+            <p class="tl-inst"><i class="fas fa-building"></i> StartupX — New York, NY</p>
+            <p class="tl-desc">Full-stack intern at a fintech startup. Worked across the entire product in a high-velocity agile team.</p>
+            <ul class="exp-ul">
+              <li>Onboarding flow increased conversions by 22%</li>
+              <li>Integrated payment and KYC verification APIs</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="sec-head ru">
+        <span class="sec-tag">Freelance</span>
+        <h2 class="sec-title">What I <span class="grad-txt">Offer</span></h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card glass-card ru" style="--d:.05s"><div class="svc-ico"><i class="fas fa-code"></i></div><h4>Web Development</h4><p>Custom performant web apps built with modern stacks tailored to your business needs.</p></div>
+        <div class="svc-card glass-card ru" style="--d:.10s"><div class="svc-ico"><i class="fas fa-paint-brush"></i></div><h4>UI/UX Design</h4><p>User-first Figma design — wireframes, prototypes, and pixel-perfect design systems.</p></div>
+        <div class="svc-card glass-card ru" style="--d:.15s"><div class="svc-ico"><i class="fas fa-server"></i></div><h4>Backend &amp; APIs</h4><p>Robust REST/GraphQL APIs and microservices built for scale and reliability.</p></div>
+        <div class="svc-card glass-card ru" style="--d:.20s"><div class="svc-ico"><i class="fas fa-cloud"></i></div><h4>Cloud &amp; DevOps</h4><p>AWS/GCP deployment, Docker containerization, and automated CI/CD pipelines.</p></div>
+        <div class="svc-card glass-card ru" style="--d:.25s"><div class="svc-ico"><i class="fas fa-mobile-alt"></i></div><h4>Mobile Apps</h4><p>Cross-platform apps with React Native — iOS and Android from one codebase.</p></div>
+        <div class="svc-card glass-card ru" style="--d:.30s"><div class="svc-ico"><i class="fas fa-chart-bar"></i></div><h4>Tech Consulting</h4><p>Architecture reviews, tech stack guidance, and mentoring for startups and scale-ups.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ACHIEVEMENTS ─── -->
+  <section id="achievements" class="section alt-bg">
+    <div class="container">
+      <div class="sec-head ru">
+        <span class="sec-tag">Recognition</span>
+        <h2 class="sec-title">Achievements &amp; <span class="grad-txt">Milestones</span></h2>
+      </div>
+      <div class="counters-row ru" style="--d:.1s">
+        <div class="ctr-card glass-card">
+          <div class="ctr-ico"><i class="fas fa-trophy"></i></div>
+          <div class="ctr-val count-anim" data-target="12">0</div>
+          <div class="ctr-lbl">Awards Won</div>
+        </div>
+        <div class="ctr-card glass-card">
+          <div class="ctr-ico"><i class="fas fa-project-diagram"></i></div>
+          <div class="ctr-val count-anim" data-target="80">0</div>
+          <div class="ctr-lbl">Projects Shipped</div>
+        </div>
+        <div class="ctr-card glass-card">
+          <div class="ctr-ico"><i class="fas fa-users"></i></div>
+          <div class="ctr-val count-anim" data-target="40">0</div>
+          <div class="ctr-lbl">Happy Clients</div>
+        </div>
+        <div class="ctr-card glass-card">
+          <div class="ctr-ico"><i class="fab fa-github"></i></div>
+          <div class="ctr-val count-anim" data-target="500">0</div>
+          <div class="ctr-lbl">GitHub Stars</div>
+        </div>
+      </div>
+      <div class="awards-grid">
+        <div class="award-card glass-card ru" style="--d:.1s">
+          <div class="aw-ico"><i class="fas fa-award"></i></div>
+          <div><h4>Awwwards — Site of the Day 2024</h4><p>Portfolio recognized for exceptional design and creative excellence.</p></div>
+        </div>
+        <div class="award-card glass-card ru" style="--d:.15s">
+          <div class="aw-ico"><i class="fas fa-crown"></i></div>
+          <div><h4>GitHub Top Contributor 2023</h4><p>Top 1% globally — 2,000+ commits and 500+ stars across open source repos.</p></div>
+        </div>
+        <div class="award-card glass-card ru" style="--d:.20s">
+          <div class="aw-ico"><i class="fas fa-bolt"></i></div>
+          <div><h4>HackSF 2022 — 1st Place</h4><p>Won among 200+ teams with an AI-powered accessibility tool.</p></div>
+        </div>
+        <div class="award-card glass-card ru" style="--d:.25s">
+          <div class="aw-ico"><i class="fas fa-pen-nib"></i></div>
+          <div><h4>Dev.to Top Author — 50k Readers</h4><p>200+ technical articles reaching 50,000 monthly readers on web development.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="sec-head ru">
+        <span class="sec-tag">Get In Touch</span>
+        <h2 class="sec-title">Let's <span class="grad-txt">Connect</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left ru" style="--d:.1s">
+          <p class="c-intro">Have a project in mind? I'm always open to exciting opportunities and meaningful conversations.</p>
+          <div class="c-details">
+            <a href="mailto:alex@portfolio.dev" class="c-row">
+              <div class="c-ico"><i class="fas fa-envelope"></i></div>
+              <div><span class="c-lbl">Email</span><span class="c-val">alex@portfolio.dev</span></div>
+            </a>
+            <a href="tel:+14155551234" class="c-row">
+              <div class="c-ico"><i class="fas fa-phone"></i></div>
+              <div><span class="c-lbl">Phone</span><span class="c-val">+1 (415) 555-1234</span></div>
+            </a>
+            <div class="c-row">
+              <div class="c-ico"><i class="fas fa-map-marker-alt"></i></div>
+              <div><span class="c-lbl">Location</span><span class="c-val">San Francisco, CA, USA</span></div>
+            </div>
+          </div>
+          <div class="socials">
+            <a href="#" class="soc-ico" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="soc-ico" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="soc-ico" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="soc-ico" title="Dev.to"><i class="fab fa-dev"></i></a>
+            <a href="#" class="soc-ico" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+          </div>
+          <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.9855509847!2d-122.50764016938354!3d37.75781499657613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="190" style="border:0;border-radius:14px;" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <form class="c-form glass-card ru" id="contactForm" style="--d:.2s" novalidate>
+          <div class="form-row2">
+            <div class="fg"><label for="fFirst">First Name</label><input type="text" id="fFirst" placeholder="John" required /></div>
+            <div class="fg"><label for="fLast">Last Name</label><input type="text" id="fLast" placeholder="Doe" required /></div>
+          </div>
+          <div class="fg"><label for="fEmail">Email</label><input type="email" id="fEmail" placeholder="john@example.com" required /></div>
+          <div class="fg"><label for="fSubj">Subject</label><input type="text" id="fSubj" placeholder="Project Inquiry" /></div>
+          <div class="fg"><label for="fMsg">Message</label><textarea id="fMsg" rows="5" placeholder="Tell me about your project..." required></textarea></div>
+          <button type="submit" class="btn btn-primary full-w ripple"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <div class="f-success" id="formSuccess"><i class="fas fa-check-circle"></i> Message sent! I'll reply within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="ft-brand">
+          <a href="#hero" class="nav-brand">AM<span class="bdot">.</span></a>
+          <p>Crafting digital experiences with passion, precision, and relentless focus on quality.</p>
+        </div>
+        <div class="ft-links">
+          <h6>Quick Links</h6>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="ft-social">
+          <h6>Find Me</h6>
+          <div class="ft-socs">
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+            <a href="#" title="Dev.to"><i class="fab fa-dev"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <span>© 2025 Alex Morgan. Crafted with <i class="fas fa-heart" style="color:#f43f5e"></i> and coffee.</span>
+        <a href="#hero" class="back-top" id="backTop" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
