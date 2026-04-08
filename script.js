@@ -23,7 +23,7 @@
     clearInterval(interval);
     setTimeout(() => {
       loader.classList.add('out');
-2      document.querySelectorAll('.hero .ru').forEach(el => {
+      document.querySelectorAll('.hero .ru').forEach(el => {
         el.classList.add('visible');
       });
     }, 400);
@@ -36,16 +36,36 @@
 ───────────────────────────────────────────── */
 (function initCursor() {
   const inner = document.getElementById('cursorInner');
-  if (!inner) return;
+  const outer = document.getElementById('cursorOuter');
+  if (!inner || !outer) return;
   if (window.matchMedia('(pointer: coarse)').matches) return;
 
   let mouseX = 0, mouseY = 0;
   let innerX = 0, innerY = 0;
+  let outerX = 0, outerY = 0;
 
   document.addEventListener('mousemove', e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
+
+  // Hover effects
+  document.addEventListener('mouseenter', e => {
+    if (e.target.closest('a, button, .ripple, .ca-btn, .nav-link')) {
+      outer.classList.add('hov', 'large');
+      inner.classList.add('large');
+    } else {
+      outer.classList.remove('hov', 'large');
+      inner.classList.remove('large');
+    }
+  }, true);
+
+  document.addEventListener('mouseleave', e => {
+    if (!e.target.closest('a, button, .ripple, .ca-btn, .nav-link')) {
+      outer.classList.remove('hov', 'large');
+      inner.classList.remove('large');
+    }
+  }, true);
 
   function lerpCursor() {
     const dx = mouseX - innerX;
@@ -60,6 +80,13 @@
     innerX += dx * alpha;
     innerY += dy * alpha;
     inner.style.transform = `translate(calc(${innerX}px - 50%), calc(${innerY}px - 50%))`;
+
+    // Outer follows slower
+    const outerDx = mouseX - outerX;
+    const outerDy = mouseY - outerY;
+    outerX += outerDx * 0.1;
+    outerY += outerDy * 0.1;
+    outer.style.transform = `translate(calc(${outerX}px - 50%), calc(${outerY}px - 50%))`;
 
     requestAnimationFrame(lerpCursor);
   }
@@ -200,7 +227,7 @@
   }
 
   // Start after loader
-  setTimeout(type, 2600);
+  setTimeout(type, 300);
 })();
 
 
@@ -518,10 +545,16 @@ function showCertModal(certName) {
   const existing = document.getElementById('certModal');
   if (existing) existing.remove();
 
+  // Ensure loader is hidden
+  const loader = document.getElementById('pageLoader');
+  if (loader && !loader.classList.contains('out')) {
+    loader.classList.add('out');
+  }
+
   const modal = document.createElement('div');
   modal.id = 'certModal';
   modal.style.cssText = `
-    position: fixed; inset: 0; z-index: 99997;
+    position: fixed; inset: 0; z-index: 100000;
     background: rgba(0,0,0,.75);
     display: flex; align-items: center; justify-content: center;
     backdrop-filter: blur(8px);
