@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  ![Portfolio Preview](https://vikas-kanchugar.vercel.app/images/favicon/192x192.png)
+  ![Portfolio Preview](https://vikas-kanchugar.vercel.app/VK.png)
 
   ### 🌟 Live Demo: [vikas-kanchugar.vercel.app](https://vikas-kanchugar.vercel.app)
 
